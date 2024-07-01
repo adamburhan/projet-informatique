@@ -4,26 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Internship Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Project Site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project-statement.html">Project Statement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="detailed-description.html">Detailed Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="development-plan.html">Development Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="progress-reports.html">Progress Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="final-report.html">Final Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="bg-dark text-white text-center py-3">
         <h1>OOD-SLAM (Projet en robotique et apprentissage automatique)</h1>
     </header>
-    <div class="container">
-        <p>Bienvenue sur mon projet de stage de recherche. Vous trouverez ici des mises à jour hebdomadaires et les détails du projet.</p>
+    <div class="container mt-4">
+        <p class="lead">Bienvenue sur mon projet de stage de recherche. Vous trouverez ici des mises à jour hebdomadaires et les détails du projet.</p>
         <h2>Description du Projet</h2>
         <p>Je travaille avec Dr Samer Nashed, un post-doctorant dans le laboratoire REAL de mon professeur Liam Paull. L'objectif de notre projet est de développer un modèle capable de déterminer quel algorithme SLAM (Simultaneous Localization and Mapping) utiliser en fonction des données de l'environnement. Pour ceux qui ne sont pas familiers avec la robotique, SLAM est une technique essentielle qui permet à un robot de construire une carte de son environnement tout en suivant sa propre position. Cela est crucial pour la navigation autonome dans des environnements inconnus. Cependant, différents algorithmes SLAM sont conçus pour fonctionner de manière optimale dans des conditions spécifiques et peuvent être sensibles aux variations de l'environnement, telles que les changements de luminosité, la complexité des formes ou la présence de mouvements. Par conséquent, choisir le bon algorithme pour un environnement donné est essentiel pour garantir la précision et la fiabilité de la navigation du robot. Notre projet vise à développer un modèle capable de détecter automatiquement l'algorithme SLAM le plus approprié en fonction des caractéristiques de l'environnement. Pour cela, nous devons comprendre les différents composants des systèmes SLAM, en particulier les 'front-ends' et les 'back-ends'. Les 'front-ends' sont responsables de l'extraction des caractéristiques et de la préparation des données pour l'optimisation, tandis que les 'back-ends' résolvent effectivement le problème d'optimisation. En plus de cela, nous allons nous familiariser avec les réseaux de neurones convolutifs (CNN) et la bibliothèque PyTorch, qui joueront un rôle crucial dans la création de notre modèle de classification. Ce modèle devra être capable de distinguer les données du capteur générées par l'environnement et de déterminer si elles se situent dans la plage de fonctionnement optimale des différents 'front-ends' de SLAM. En résumé, notre projet vise à améliorer la robustesse et la flexibilité des systèmes SLAM en développant un modèle capable de sélectionner dynamiquement l'algorithme le plus adapté à l'environnement, ce qui est crucial pour les applications de robotique autonome.</p>
         <h2>Rapports Hebdomadaires</h2>
-        <ul>
-            <li><a href="week1.html">Semaine 1</a></li>
-            <!-- <li><a href="week2.html">Semaine 2</a></li> -->
-            <!-- Add more weeks as needed -->
-            <li><a href="week2.html">Semaine 2</a></li>
-        </ul>
+        <div class="card my-3">
+            <div class="card-body">
+                <h5 class="card-title">Semaine 1</h5>
+                <p class="card-text">Description of Week 1 activities...</p>
+                <a href="week1.html" class="btn btn-primary">Read more</a>
+            </div>
+        </div>
+        <div class="card my-3">
+            <div class="card-body">
+                <h5 class="card-title">Semaine 2</h5>
+                <p class="card-text">Description of Week 2 activities...</p>
+                <a href="week2.html" class="btn btn-primary">Read more</a>
+            </div>
+        </div>
     </div>
-    <footer class="footer">
+    <footer class="footer bg-dark text-white text-center py-3">
         <p>&copy; 2024 Mon Projet de Stage de Recherche</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
