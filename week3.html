@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Project Site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project-statement.html">Project Statement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="detailed-description.html">Detailed Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="development-plan.html">Development Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="progress-reports.html">Progress Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="final-report.html">Final Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Rapport semaines 5-6</h1>
+    </header>
+    <div class="container mt-4">
+        <h2>Rapport semaines 5-6</h2>
+        <p style="text-align: justify;">
+            Les semaines 5 et 6 ont été consacrées au développement de l'environnement d'expérimentation. J'ai configuré les outils nécessaires pour collecter des données à partir des algorithmes ORB-SLAM2 et LOAM en utilisant le dataset KITTI. Cela a impliqué l'écriture de scripts pour automatiser le processus de collecte de données et la mise en place d'une structure de répertoires pour organiser les données collectées. J'ai également commencé à analyser les données collectées pour comprendre les performances initiales des algorithmes dans différents scénarios.
+        </p>
+        
+        <p style="text-align: justify;">
+            En particulier, le travail avec le code open source de LOAM a posé des défis liés à la compréhension du fonctionnement de ROS (Robot Operating System). ROS est un framework flexible pour l'écriture de logiciels pour robots. Il fournit des services similaires à ceux d'un système d'exploitation, tels que l'abstraction du matériel, le contrôle des périphériques de bas niveau, l'implémentation de fonctionnalités courantes, la communication entre processus et la gestion des paquets. J'ai appris à utiliser ROS pour m'abonner correctement aux topics appropriés afin de récolter les données nécessaires pendant la simulation.
+        </p>
+        
+        <p style="text-align: justify;">
+            En ce qui concerne l'évaluation de la performance des algorithmes SLAM, j'ai découvert qu'il existe plusieurs méthodes. Une approche populaire consiste à évaluer uniquement la trajectoire, c'est-à-dire à chaque timestep, comparer les coordonnées de translation et de rotation estimées avec celles du ground truth. Cependant, il existe deux façons de faire cela selon le système de coordonnées utilisé : le World coordinate frame ou le robot coordinate frame.
+        </p>
+        
+        <p style="text-align: justify;">
+            Le World coordinate frame est un système de coordonnées globales où les positions et orientations sont exprimées par rapport à un repère fixe dans l'environnement. Le robot coordinate frame, quant à lui, est un système de coordonnées locales attaché au robot, où les positions et orientations sont exprimées par rapport à un repère mobile fixé au robot. La distinction est importante car les erreurs de trajectoire peuvent être interprétées différemment selon le cadre de référence utilisé. Une compréhension précise de ces concepts est essentielle pour correctement calculer l'erreur associée à chaque frame.
+        </p>
+        
+        <p style="text-align: justify;">
+            Jusqu'à présent, tout semble respecter le plan de développement. Cependant, plus tôt l'environnement d'expérimentation sera finalisé, plus tôt nous pourrons nous concentrer sur la partie recherche du projet.
+        </p>
+        
+        
+    </div>
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Mon Projet de Stage de Recherche</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
