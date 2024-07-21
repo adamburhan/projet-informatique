@@ -42,19 +42,20 @@
     <div class="container mt-4">
         <h2>Rapport semaines 9-10</h2>
         <p style="text-align: justify;">
-            Durant les semaines 7 et 8, j'ai rencontré quelques problèmes inattendus liés à la configuration de l'environnement d'expérimentation, que j'ai pu résoudre avec l'aide de mon superviseur. Parallèlement, j'ai suivi des tutoriels sur PyTorch pour me familiariser avec cette bibliothèque et commencé à développer notre premier modèle de prédiction basé sur les CNN. Les premières expérimentations avec le modèle ont montré des résultats peu prometteurs, mais c'était surtout pour mettre en place le setup et tester le workflow du téléchargement des données avec leurs étiquettes, et voir si cela fonctionnait avec nos données collectées. Nous avons utilisé un modèle préentraîné et l'outil wandb pour la visualisation. Il reste encore beaucoup à faire pour améliorer sa précision et sa robustesse.
+            Nous sommes actuellement dans la phase de recherche et d'expérimentation du projet. J'ai commencé par me familiariser avec l'environnement d'exécution. Puisque nous voulons entraîner un réseau de neurones artificiel avec de nombreux paramètres, il est inefficace de le faire fonctionner localement sur un CPU. Heureusement, le laboratoire dispose d'une solution pour cette problématique : nous avons accès à des ressources de calcul haute performance fournies par Compute Canada. Pour utiliser ces ressources, il est nécessaire de créer une image Singularity contenant le programme et toutes les dépendances nécessaires. Ainsi, durant la première semaine, je me suis familiarisé avec les procédures pour entraîner un modèle sur les clusters de Compute Canada (suivi d'un tutoriel et lecture sur Singularity et Docker).
         </p>
         
         <p style="text-align: justify;">
-            Nous sommes maintenant dans la phase de recherche du projet. Il est crucial d'explorer différentes architectures de CNN (mon superviseur m'a suggéré plusieurs articles) et de lire sur les diverses méthodes que nous pouvons employer pour tenter de rendre notre modèle plus performant et précis (fonctions de perte, transformer le problème en un problème de classification plutôt qu'un problème de régression).
+            Après m'être familiarisé avec le workflow, j'ai envoyé un premier modèle CNN sur un cluster pour qu'il soit entraîné. Nous avons choisi d'utiliser un modèle CNN préentraîné, AlexNet, très populaire dans la classification d'images. AlexNet a été entraîné sur des millions d'images du dataset ImageNet, ce qui lui permet de capturer des caractéristiques visuelles très diverses et complexes. Cette capacité à reconnaître et à extraire des caractéristiques pertinentes est très intéressante pour nous, car notre dataset est relativement petit en comparaison. En utilisant un modèle préentraîné, nous espérons tirer parti de ces caractéristiques déjà apprises et transférer cet apprentissage à notre problème spécifique de localisation et de cartographie simultanées (SLAM).
         </p>
         
         <p style="text-align: justify;">
-            Il est maintenant essentiel de tester de nombreuses hypothèses et d'être très attentif aux résultats. De plus, je suis en train de mettre en place un compte avec Compute Canada, car nous avons des clusters assignés pour le laboratoire. Cela va énormément accélérer l'entraînement du modèle et nous permettra de réaliser plus de tests plus rapidement.
+            Ensuite, j'ai envoyé le même modèle avec des modifications concernant les fonctions de perte. Le premier modèle était un modèle de régression, donc nous avons modifié la dernière couche d'AlexNet, initialement une couche de classification, en une couche linéaire de régression avec une perte aux moindres carrés. Cependant, après avoir discuté avec mon superviseur, nous avons conclu que les tâches de classification sont généralement plus faciles à apprendre pour les réseaux de neurones. Nous avons donc décidé de discrétiser nos étiquettes d'entraînement (les erreurs de localisation par image) en utilisant la méthode des quantiles. Le deuxième modèle était donc également basé sur AlexNet mais fonctionnait maintenant comme un classifieur avec la fonction de perte d'entropie croisée.
         </p>
         
-        
-        
+        <p style="text-align: justify;">
+            Finalement, le troisième modèle envoyé était aussi un classifieur AlexNet mais cette fois-ci avec une fonction de perte EMD. Cette dernière peut incorporer une notion de distance et d'ordre entre les classes. Notre raisonnement est que, puisque nos classes sont des quantiles, prédire le quantile 5 au lieu du quantile 1 est plus grave que prédire le quantile 2, et nous voulons refléter ceci dans la perte. Pour le moment, nous en sommes là et attendons les résultats et les visualisations (nous utilisons le framework wandb pour la visualisation) pour discuter des résultats et planifier les prochaines expérimentations.
+        </p>        
     </div>
     <footer class="footer bg-dark text-white text-center py-3">
         <p>&copy; 2024 Mon Projet de Stage de Recherche</p>
