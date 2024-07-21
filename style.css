@@ -74,3 +74,13 @@ ul li {
     background-color: #007BFF;
     border-color: #007BFF;
 }
+
+.carousel {
+    max-width: 800px; /* Set the max width */
+    margin: 0 auto;   /* Center the carousel */
+}
+
+.carousel-item img {
+    width: 100%;      /* Make sure images fit within the carousel */
+    height: auto;     /* Maintain aspect ratio */
+}
