@@ -76,7 +76,7 @@ ul li {
 }
 
 .carousel {
-    max-width: 800px; /* Set the max width */
+    max-width: 400px; /* Set the max width */
     margin: 0 auto;   /* Center the carousel */
 }
 
