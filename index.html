@@ -1,107 +1,3 @@
-<!-- Add more weeks as needed 
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet de recherche</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">OOD-SLAM</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="project-statement.html">Enoncé du projet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="detailed-description.html">Description détaillée</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="development-plan.html">Plan de développement</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="progress-reports.html">Rapports d'avancement</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="final-report.html">Rapport final</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>OOD-SLAM (Projet en robotique et apprentissage automatique)</h1>
-    </header>
-    <div class="container mt-4">
-        <p class="lead">Bienvenue sur mon projet de stage de recherche. Vous trouverez ici des mises à jour hebdomadaires et les détails du projet.</p>
-        <h2>Enoncé du Projet</h2>
-        <p style="text-align: justify;">Dans un système de robotique autonome, il est crucial de pouvoir opérer dans des environnements complexes et dynamiques. Un robot autonome doit être capable de prendre des décisions critiques dans des situations difficiles et ambiguës..</p>
-
-        <p style="text-align: justify;">Sous la supervision du Dr. Samer Nashed et du Dr. Liam Paull au laboratoire REAL, ce projet vise à développer un modèle de performance pour les algorithmes SLAM (Simultaneous Localization and Mapping). Le but est de permettre au robot de mieux évaluer ses capacités de perception et de décision en fonction de l'environnement.</p>
-        
-        <p style="text-align: justify;">Les algorithmes SLAM permettent à un robot de créer une carte de son environnement tout en se localisant simultanément. Il existe plusieurs variantes de ces algorithmes, optimisées pour différents capteurs (caméras, LIDAR, etc.) et environnements. Nous visons à développer un modèle de performance indépendant de l'algorithme SLAM utilisé, en utilisant des réseaux de neurones convolutionnels (CNN). Pour commencer, nous nous concentrerons sur ORBSLAM2, un algorithme basé sur des caméras, avant de tester la généralisation de notre modèle à LOAM, un algorithme utilisant des capteurs LIDAR.</p>
-        
-        <p style="text-align: justify;">Pour entraîner le CNN, nous utiliserons le jeu de données KITTI, qui fournit des séquences d'images annotées. En comparant les trajectoires estimées par les algorithmes SLAM avec les trajectoires réelles fournies par KITTI, nous pourrons évaluer et étiqueter les performances de chaque algorithme.</p>
-        
-        <p style="text-align: justify;">En développant ce modèle de performance, nous espérons donner au robot la capacité d'introspection, lui permettant d'évaluer la fiabilité de ses composants de perception dans divers environnements. Cette introspection est essentielle pour éviter les décisions risquées et améliorer l'autonomie et la robustesse des systèmes robotiques.
-
-            En résumé, ce projet vise à créer un modèle prédictif de performance pour les algorithmes SLAM, en utilisant les techniques de deep learning et en explorant la possibilité de généraliser ce modèle à différents algorithmes et capteurs.</p>
-        <h2>Rapports Hebdomadaires</h2>
-        <div class="card my-3">
-            <div class="card-body">
-                <h5 class="card-title">Semaines 1-2 (6 mai - 19 mai)</h5>
-                <p class="card-text">Lecture sur SLAM...</p>
-                <a href="week1.html" class="btn btn-primary">Read more</a>
-            </div>
-        </div>
-        <div class="card my-3">
-            <div class="card-body">
-                <h5 class="card-title">Semaines 3-4 (20 mai - 2 juin)</h5>
-                <p class="card-text">Discussion avec superviseur, plus de lecture...</p>
-                <a href="week2.html" class="btn btn-primary">Read more</a>
-            </div>
-        </div>
-        <div class="card my-3">
-            <div class="card-body">
-                <h5 class="card-title">Semaines 5-6 (3 juin - 16 juin)</h5>
-                <p class="card-text">Début du développement de l'environnement d'expérimentation...</p>
-                <a href="week3.html" class="btn btn-primary">Read more</a>
-            </div>
-        </div>
-        <div class="card my-3">
-            <div class="card-body">
-                <h5 class="card-title">Semaines 7-8 (17 juin - 30 juin)</h5>
-                <p class="card-text">Problème inattendu, tutoriel PyTorch, premier modèle...</p>
-                <a href="week4.html" class="btn btn-primary">Read more</a>
-            </div>
-        </div>
-        <div class="card my-3">
-            <div class="card-body">
-                <h5 class="card-title">Semaines 9-10 (1 juillet - 14 juillet)</h5>
-                <p class="card-text">Environnement d'execution (Compute Canada), architecture du modele...</p>
-                <a href="week5.html" class="btn btn-primary">Read more</a>
-            </div>
-        </div>
-    </div>
-    <footer class="footer bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Mon Projet de Stage de Recherche</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,50 +37,48 @@
         </div>
     </nav>
     
-    <header class="hero bg-dark text-white text-center py-5">
-        <div class="hero-content">
-            <h1>OOD-SLAM</h1>
-            <p>(Projet en robotique et apprentissage automatique)</p>
-        </div>
+    <header class="bg-dark text-white text-center py-5">
+        <h1>OOD-SLAM</h1>
+        <p>(Projet en robotique et apprentissage automatique)</p>
     </header>
     
-    <section class="highlights container mt-4">
-        <h2>About the Project</h2>
-        <p class="lead">This project aims to develop a performance model for SLAM (Simultaneous Localization and Mapping) algorithms in autonomous robotics.</p>
+    <section class="container mt-4">
+        <h2>À propos du projet</h2>
+        <p class="lead">Ce projet vise à développer un modèle de performance pour les algorithmes SLAM (Localisation et Cartographie Simultanées) en robotique autonome.</p>
         
-        <h2>Project Objectives</h2>
-        <p>In an autonomous robotics system, it is crucial to operate in complex and dynamic environments. An autonomous robot must be capable of making critical decisions in difficult and ambiguous situations.</p>
-        <p>Under the supervision of Dr. Samer Nashed and Dr. Liam Paull at the REAL laboratory, this project aims to develop a performance model for SLAM algorithms. The goal is to enable the robot to better assess its perception and decision-making capabilities based on the environment.</p>
+        <h2>Objectifs du projet</h2>
+        <p>Dans un système de robotique autonome, il est crucial de fonctionner dans des environnements complexes et dynamiques. Un robot autonome doit être capable de prendre des décisions critiques dans des situations difficiles et ambiguës.</p>
+        <p>Sous la supervision du Dr. Samer Nashed et du Professeur Liam Paull au laboratoire REAL, ce projet vise à développer un modèle de performance pour les algorithmes SLAM. L'objectif est de permettre au robot d'évaluer plus précisément ses capacités de perception et de prise de décision en fonction de l'environnement et de le faire en temps réel et sans informations à priori sur l'environnement.</p>
     </section>
     
-    <section class="grid-container container mt-4">
+    <section class="container mt-4">
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="images/project_statement.jpg" class="card-img-top logo" alt="Project Statement">
+                    <img src="images/project_statement.jpg" class="card-img-top" alt="Project Statement">
                     <div class="card-body">
-                        <h5 class="card-title">Project Statement</h5>
-                        <p class="card-text">Detailed explanation of the project goals and methodology.</p>
+                        <h5 class="card-title">Énoncé du projet</h5>
+                        <p class="card-text">Explication détaillée de l'énoncé du projet, de la méthodologie et des objectifs</p>
                         <a href="project-statement.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="images/progress_reports.png" class="card-img-top logo" alt="Progress Reports">
+                    <img src="images/progress_reports.png" class="card-img-top" alt="Progress Reports">
                     <div class="card-body">
-                        <h5 class="card-title">Progress Reports</h5>
-                        <p class="card-text">Weekly updates on the project development and findings.</p>
+                        <h5 class="card-title">Rapports d'avancement</h5>
+                        <p class="card-text">Mise à jour régulière sur l'avancement du projet.</p>
                         <a href="progress-reports.html" class="btn btn-primary">Read Reports</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="images/final_report.png" class="card-img-top logo" alt="Final Report">
+                    <img src="images/final_report.png" class="card-img-top" alt="Final Report">
                     <div class="card-body">
-                        <h5 class="card-title">Final Report</h5>
-                        <p class="card-text">Comprehensive report on the project outcomes and future directions.</p>
+                        <h5 class="card-title">Rapport final</h5>
+                        <p class="card-text">Rapport complet sur les résultats du projet et les orientations futures.</p>
                         <a href="final-report.html" class="btn btn-primary">View Report</a>
                     </div>
                 </div>
@@ -202,4 +96,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
