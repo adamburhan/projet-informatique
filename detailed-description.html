@@ -37,11 +37,34 @@
         </div>
     </nav>
     <header class="bg-dark text-white text-center py-3">
-        <h1>Detailed Description</h1>
+        <h1>Description détaillée</h1>
     </header>
     <div class="container mt-4">
-        <h2>Detailed Description</h2>
-        <p>Detailed description of the project goes here.</p>
+        <h2>OOD-SLAM</h2>
+
+        <h3>Spécification Fonctionnelle</h3>
+        <p>Le projet OOD-SLAM vise à développer un modèle de performance pour les algorithmes SLAM (Simultaneous Localization and Mapping) utilisés en robotique autonome. L'objectif principal est de créer un modèle capable d'évaluer la performance des algorithmes SLAM dans divers environnements, en se basant sur des données visuelles et de télémétrie. Le résultat attendu est un modèle prédictif, élaboré à l'aide de techniques d'apprentissage automatique, qui peut être utilisé pour estimer l'efficacité des algorithmes SLAM sans nécessiter d'essais physiques dans chaque nouvel environnement.</p>
+
+        <h3>Environnement et Contraintes Techniques</h3>
+        <p>Le projet a été réalisé en utilisant des scripts Python pour la génération de jeux de données, ainsi que des algorithmes SLAM open source tels qu'ORB-SLAM2 et LOAM pour générer les données de trajectoire. La génération de données a impliqué la création d'une structure de répertoires ordonnée pour organiser les séquences d'images et les étiquettes associées. Le modèle de performance a été développé en utilisant la bibliothèque PyTorch pour l'apprentissage automatique, structuré avec un DataLoader, un script de définition de modèle et un script d'entraînement. La visualisation des résultats a été facilitée par l'utilisation de Weights & Biases (wandb) pour le suivi des expériences et des bibliothèques Matplotlib et Seaborn pour la création de matrices de confusion.</p>
+
+        <h3>Architecture Logicielle</h3>
+        <p>L'architecture logicielle du projet est composée de plusieurs modules principaux :</p>
+        <ul>
+            <li><strong>Génération de Jeux de Données</strong>: Ce module est responsable de la collecte et de l'organisation des données brutes en un format utilisable pour l'entraînement du modèle. Cela inclut la génération de trajectoires estimées par les algorithmes SLAM et l'organisation des données en répertoires structurés.</li>
+            <li><strong>Entraînement du Modèle PyTorch</strong>: Comprend un DataLoader pour charger les données, un script de définition de modèle qui spécifie l'architecture du réseau de neurones, et un script d'entraînement qui gère le processus d'apprentissage.</li>
+            <li><strong>Visualisation et Analyse des Résultats</strong>: Utilisation de wandb pour le suivi des expériences et des performances du modèle, ainsi que Matplotlib et Seaborn pour l'analyse des résultats via des matrices de confusion.</li>
+        </ul>
+
+        <h3>Modules Principaux de Travail</h3>
+        <p>Les principaux modules de travail incluent :</p>
+        <ul>
+            <li><strong>Développement de la Structure de Jeux de Données</strong>: Création de scripts pour automatiser la collecte et l'organisation des données nécessaires.</li>
+            <li><strong>Construction et Entraînement du Modèle</strong>: Implémentation de l'architecture du modèle, y compris la sélection des hyperparamètres et l'optimisation.</li>
+            <li><strong>Analyse des Performances et Documentation</strong>: Analyse des résultats obtenus et compilation d'un rapport final documentant les méthodes, résultats et conclusions du projet.</li>
+        </ul>
+
+        <p>L'interaction avec le professeur responsable s'est concentrée sur l'élaboration de ces modules, l'optimisation des méthodes de collecte de données et de modélisation, ainsi que sur la clarification des objectifs et des attentes du projet.</p>
     </div>
     <footer class="footer bg-dark text-white text-center py-3">
         <p>&copy; 2024 Mon Projet de Stage de Recherche</p>
