@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport 6</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">OOD-SLAM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project-statement.html">Enoncé du projet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="detailed-description.html">Description détaillée</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="development-plan.html">Plan de développement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="progress-reports.html">Rapports d'avancement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="final-report.html">Rapport final</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Rapport semaines 11-12</h1>
+    </header>
+    <div class="container mt-4">
+        <h2>Rapport semaines 11-12</h2>
+        <p style="text-align: justify;">
+            Pendant les deux dernières semaines, nous avons principalement axé nos efforts sur l'exploration de diverses techniques de "transfer learning" afin d'améliorer la performance de notre modèle de classification SLAM. Étant donné que notre dataset est relativement petit, l'utilisation de modèles préentraînés comme AlexNet nous permet de tirer parti des caractéristiques déjà apprises sur de grands ensembles de données, ce qui réduit notre dépendance à une grande quantité de données spécifiques au domaine.
+        </p>
+        
+        <p style="text-align: justify;">
+            Nous avons commencé par expérimenter avec plusieurs configurations de "weight freezing". Cela impliquait de fixer certaines couches du modèle tout en en laissant d'autres se mettre à jour pendant l'entraînement. En particulier, nous avons exploré l'effet de geler uniquement les premières couches convolutives, puis progressivement dégeler d'autres couches, jusqu'à atteindre les dernières couches convolutives et entièrement dégeler les couches entièrement connectées du modèle. Chaque configuration a été évaluée sur sa capacité à généraliser et à éviter le surapprentissage (overfitting) sur notre petit dataset.
+        </p>
+        
+        <p style="text-align: justify;">
+            Parallèlement, nous avons expérimenté avec plusieurs taux d'apprentissage ("learning rates"), en ajustant ceux-ci pour trouver un équilibre entre convergence rapide et stabilité de l'apprentissage. Nous avons observé que certaines configurations de "weight freezing" fonctionnent mieux avec des taux d'apprentissage spécifiques, ce qui a été un facteur important dans notre processus d'optimisation.
+        </p>
+        
+        <p style="text-align: justify;">
+            Actuellement, nous analysons les résultats obtenus à partir de ces diverses configurations pour identifier celle offrant la meilleure performance globale. Une fois que nous aurons consolidé ces résultats, nous pourrons affiner notre modèle et envisager d'explorer d'autres architectures ou d'ajouter des données supplémentaires pour une validation plus rigoureuse. 
+        </p>       
+    </div>
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Mon Projet de Stage de Recherche</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
